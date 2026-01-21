@@ -26,19 +26,19 @@ st.markdown("""
 }
 .main-header {
     text-align: center;
-    color: #2c3e50;
+    color: #1a1a1a;  /* Changed from #2c3e50 to darker */
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 .sub-header {
     text-align: center;
-    color: #7f8c8d;
+    color: #333333;  /* Changed from #7f8c8d to much darker */
     font-size: 1rem;
     margin-bottom: 2rem;
 }
 .stButton>button {
-    background-color: #7f8c8d;
+    background-color: #5a6c7d;  /* Darker button background */
     color: white;
     border-radius: 8px;
     border: none;
@@ -47,7 +47,7 @@ st.markdown("""
     transition: all 0.3s;
 }
 .stButton>button:hover {
-    background-color: #5a6c7d;
+    background-color: #3d4f5e;  /* Even darker on hover */
     border: none;
 }
 .delete-button {
@@ -66,10 +66,10 @@ st.markdown("""
 .stat-value {
     font-size: 2rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #1a1a1a;  /* Changed from #2c3e50 to darker */
 }
 .stat-label {
-    color: #7f8c8d;
+    color: #333333;  /* Changed from #7f8c8d to much darker */
     font-size: 0.9rem;
     margin-top: 0.5rem;
 }
@@ -78,7 +78,18 @@ st.markdown("""
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 0.5rem;
-    border-left: 4px solid #7f8c8d;
+    border-left: 4px solid #5a6c7d;
+}
+/* Fix for Streamlit default text colors */
+.stMarkdown p, .stMarkdown {
+    color: #1a1a1a !important;
+}
+/* Ensure metric labels are visible */
+[data-testid="stMetricLabel"] {
+    color: #333333 !important;
+}
+[data-testid="stMetricValue"] {
+    color: #1a1a1a !important;
 }
 </style>
 """, unsafe_allow_html=True)
