@@ -16,78 +16,178 @@ st.set_page_config(
 # Custom CSS
 st.markdown("""
 <style>
-.stApp {
-    background-color: #f5f5f5;
+* {
+    color: #000000 !important;
 }
+
+.stApp {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .block-container {
     max-width: 1200px;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
 .main-header {
     text-align: center;
-    color: #1a1a1a;
+    color: #000000 !important;
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
+
 .sub-header {
     text-align: center;
-    color: #333333;
+    color: #000000 !important;
     font-size: 1rem;
     margin-bottom: 2rem;
 }
+
 .stButton>button {
-    background-color: #5a6c7d;
-    color: white;
+    background-color: #2c3e50 !important;
+    color: #ffffff !important;
     border-radius: 8px;
-    border: none;
+    border: 2px solid #2c3e50 !important;
     padding: 0.5rem 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s;
 }
+
 .stButton>button:hover {
-    background-color: #3d4f5e;
-    border: none;
+    background-color: #1a252f !important;
+    border: 2px solid #1a252f !important;
+    color: #ffffff !important;
 }
-.delete-button {
-    background-color: #e74c3c !important;
-}
-.delete-button:hover {
-    background-color: #c0392b !important;
-}
+
 .stat-card {
-    background-color: white;
+    background-color: #f8f9fa;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     text-align: center;
+    border: 1px solid #dee2e6;
 }
+
 .stat-value {
     font-size: 2rem;
     font-weight: bold;
-    color: #1a1a1a;
+    color: #000000 !important;
 }
+
 .stat-label {
-    color: #333333;
+    color: #000000 !important;
     font-size: 0.9rem;
     margin-top: 0.5rem;
+    font-weight: 500;
 }
-.subject-card {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
-    border-left: 4px solid #5a6c7d;
+
+.stTextInput label, .stSelectbox label, .stNumberInput label, 
+.stDateInput label, .stTextArea label, .stSlider label {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
 }
-.stMarkdown p, .stMarkdown {
-    color: #1a1a1a !important;
+
+.stTextInput input, .stSelectbox select, .stNumberInput input,
+.stDateInput input, .stTextArea textarea {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    border: 2px solid #ced4da !important;
 }
+
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+}
+
+.stSelectbox div[data-baseweb="select"] > div {
+    color: #000000 !important;
+}
+
 [data-testid="stMetricLabel"] {
-    color: #333333 !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
 }
+
 [data-testid="stMetricValue"] {
-    color: #1a1a1a !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stMetricDelta"] {
+    color: #000000 !important;
+}
+
+.stMarkdown, .stMarkdown p, .stMarkdown h1, .stMarkdown h2, 
+.stMarkdown h3, .stMarkdown h4, .stMarkdown li {
+    color: #000000 !important;
+}
+
+.streamlit-expanderHeader {
+    color: #000000 !important;
+    font-weight: 600 !important;
+    background-color: #f8f9fa !important;
+}
+
+.stTabs [data-baseweb="tab-list"] button {
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+.stTabs [data-baseweb="tab-list"] button[aria-selected="true"] {
+    color: #2c3e50 !important;
+}
+
+.stDataFrame {
+    color: #000000 !important;
+}
+
+.stAlert {
+    color: #000000 !important;
+}
+
+.css-1d391kg, [data-testid="stSidebar"] {
+    background-color: #f8f9fa;
+}
+
+.css-1d391kg p, [data-testid="stSidebar"] p,
+.css-1d391kg label, [data-testid="stSidebar"] label {
+    color: #000000 !important;
+}
+
+.stRadio label {
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+.stCaption {
+    color: #000000 !important;
+}
+
+footer {
+    color: #000000 !important;
+}
+
+.stSlider [data-testid="stTickBarMin"],
+.stSlider [data-testid="stTickBarMax"] {
+    color: #000000 !important;
+}
+
+.stForm button[kind="primaryFormSubmit"] {
+    background-color: #2c3e50 !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.stForm button[kind="primaryFormSubmit"]:hover {
+    background-color: #1a252f !important;
+}
+
+.stNumberInput button {
+    color: #000000 !important;
 }
 </style>
 """, unsafe_allow_html=True)
